@@ -34,7 +34,6 @@ An **AI-powered Intelligent Surveillance System** built with **Flask**, **YOLOv5
 Intelligent-Surveillance-System/
 │
 ├── app/                        # Main application code
-│   ├── __init__.py              # (optional) to treat app as package
 │   └── surveillance_web.py      # Flask backend server
 │
 ├── templates/                   # HTML Templates
