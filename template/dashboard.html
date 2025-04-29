@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Surveillance System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <div id="clock" class="clock"></div>
+        </div>
+
+        <div class="navbar-center">
+            <h1>Surveillance Dashboard</h1>
+        </div>
+
+        <div class="navbar-right">
+            <div id="alertBox" class="toast">System Active</div>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="video-container">
+            <h2>Live Feed</h2>
+            <img src="{{ url_for('video_feed') }}" width="100%" height="auto">
+        </div>
+
+        <div class="logs-section">
+            <h2>Alert Logs</h2>
+            <table>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Alert</th>
+                </tr>
+                {% for log in logs %}
+                <tr>
+                    <td>{{ log[0] }}</td>
+                    <td>{{ log[1] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

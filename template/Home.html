@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Intelligent Surveillance System</title>
+    <link rel="stylesheet" href="/static/home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <nav class="navbar">
+            <div class="logo">Intelligence Surveillance AI</div>
+            <div class="nav-links">
+                <a href="/dashboard">Dashboard</a>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <select onchange="switchLang(this.value)" class="lang-select">
+          <option value="en">🇬🇧 EN</option>
+          <option value="hi">🇮🇳 HI</option>
+        </select>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <video autoplay muted loop class="bg-video">
+                <source src="/static/surveillance.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+            <div class="hero-overlay">
+                <h1 id="hero-title">Welcome to Intelligent Surveillance System</h1>
+                <p id="hero-desc">AI-powered real-time video monitoring and alerting system</p>
+                <a href="/dashboard" class="btn" id="hero-btn">Go to Dashboard</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <h2>Real-Time Monitoring</h2>
+                <p>Instant alerts and live feed from connected cameras.</p>
+            </div>
+            <div class="card">
+                <h2>AI-Powered Detection</h2>
+                <p>Advanced algorithms to detect unusual activities.</p>
+            </div>
+            <div class="card">
+                <h2>Secure Storage</h2>
+                <p>Encrypted storage for all recorded footage.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            &copy; 2025 Intelligent Surveillance AI. All rights reserved. Created by Ayush Pandey
+        </footer>
+    </div>
+
+    <script src="/static/home.js"></script>
+</body>
+
+</html>

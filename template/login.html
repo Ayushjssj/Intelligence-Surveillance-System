@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Surveillance</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <div class="dark-toggle">
+            <button onclick="toggleDarkMode()" class="dark-toggle-btn">🌙 Toggle Dark Mode</button>
+
+        </div>
+
+        <div class="login-container">
+            <h1 class="title">Intelligence Surveillance AI</h1>
+            <div class="login-box">
+                <img src="/static/logo.png" alt="Logo" class="logo">
+                <!-- Flash message block -->
+                {% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %} {% endif %} {% endwith %}
+                <form method="POST">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                {% if error %}
+                <div class="error">{{ error }}</div>
+                {% endif %}
+                <div class="login-links">
+                    <!-- <a href="/Home">Home</a><br> -->
+                    <a href="/register">Register</a><br>
+                    <a href="/contact">Contact Us</a><br>
+                    <a href="/about">About Us</a><br>
+                    <a href="/terms">Terms & Conditions</a><br>
+                    <a href="/privacy">Privacy Policy</a><br>
+                    <a href="/faq">FAQ</a><br>
+                    <a href="/support">Support</a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">© Copyright 2025 Intelligence Surveillance AI. All rights reserved.</footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
